@@ -3,7 +3,7 @@ function toggleMenu() {
     const navLinks = document.querySelector('.nav-links');
     const hamburger = document.querySelector('.hamburger');
     navLinks.classList.toggle('active');
-    hamburger.classList.toggle('is-active'); 
+    hamburger.classList.toggle('is-active');
 }
 
 // --- Tab Functionality for Education Section ---
@@ -43,6 +43,16 @@ window.addEventListener("scroll", () => {
         goToTopBtn.classList.remove('show');
     }
 });
+
+// ADDED THIS EVENT LISTENER
+goToTopBtn.addEventListener('click', (event) => {
+    event.preventDefault(); // Prevents the default anchor link behavior
+    window.scrollTo({
+        top: 0, // Scroll to the absolute top of the page
+        behavior: 'smooth' // Use a smooth scrolling animation
+    });
+});
+
 
 // --- Scroll Animations ---
 const observer = new IntersectionObserver((entries) => {

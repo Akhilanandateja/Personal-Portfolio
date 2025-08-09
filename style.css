@@ -312,6 +312,9 @@ RESPONSIVE STYLES
 */
 
 @media (max-width: 992px) {
+  .hero {
+    padding-bottom: 120px; /* ADDED THIS LINE to prevent overlap on mobile */
+  }
   .hero-content { flex-direction: column-reverse; text-align: center; }
   .hero-description { margin: 0 auto 40px; }
   .about-grid { grid-template-columns: 1fr; }
