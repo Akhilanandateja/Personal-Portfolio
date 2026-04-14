@@ -302,6 +302,7 @@ header {
 .form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--accent-purple); }
 .connect-right .btn { width: 100%; }
 
+
 /* --- Footer --- */
 footer { text-align: center; padding: 20px 0; font-family: var(--font-mono); font-size: 13px; color: var(--text-secondary); }
 

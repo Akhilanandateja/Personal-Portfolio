@@ -526,21 +526,37 @@
                 </div>
             </div>
             <div class="connect-right">
-                <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
-                    <div class="form-group">
-                        <label for="name">Your Name</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Your Email</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="btn">Send Message <i class="fas fa-paper-plane"></i></button>
-                </form>
+                <form id="contact-form">
+
+    <!-- Web3Forms Access Key -->
+    <input type="hidden" name="access_key" value="4eef91cc-df56-4349-917e-7f7632feb14d">
+
+    <input type="hidden" name="subject" value="New Portfolio Message 🚀">
+    <input type="hidden" name="from_name" value="Akhilanandateja Portfolio">
+
+    <div class="form-group">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" required>
+    </div>
+
+    <div class="form-group">
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email" required>
+    </div>
+
+    <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+    </div>
+
+    <button type="submit" class="btn">
+        Send Message <i class="fas fa-paper-plane"></i>
+    </button>
+
+    <!-- Result Message -->
+    <p id="result" style="margin-top:10px;"></p>
+
+</form>
             </div>
         </div>
     </section>

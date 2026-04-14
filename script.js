@@ -118,3 +118,37 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+// --- Form Submission Handling ---
+const form = document.getElementById("contact-form");
+const result = document.getElementById("result");
+
+if (form) {
+    form.addEventListener("submit", function (e) {
+        e.preventDefault(); // 🔥 stops redirect
+
+        result.innerHTML = "⏳ Sending...";
+        result.style.color = "#94A3B8";
+
+        const formData = new FormData(form);
+
+        fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            body: formData
+        })
+        .then(res => res.json())
+        .then(data => {
+            if (data.success) {
+                result.innerHTML = "✅ Message sent successfully! I'll get back to you soon.";
+                result.style.color = "#22c55e";
+                form.reset();
+            } else {
+                result.innerHTML = "❌ Failed to send message!";
+                result.style.color = "red";
+            }
+        })
+        .catch(() => {
+            result.innerHTML = "❌ Something went wrong!";
+            result.style.color = "red";
+        });
+    });
+}
